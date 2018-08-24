@@ -164,7 +164,7 @@ describe('TicTacToeGame', function () {
 
     });   
 
-    describe('$scope.message', function () {
+    describe('$scope.boardIsFull', function () {
         var $scope, controller;
 
         beforeEach(function () {
