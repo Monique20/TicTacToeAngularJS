@@ -163,6 +163,24 @@ describe('TicTacToeGame', function () {
         });
 
     });   
+
+    describe('$scope.message', function () {
+        var $scope, controller;
+
+        beforeEach(function () {
+            $scope = {};
+            controller = $controller('mainController', { $scope: $scope });
+        });
+
+        it('should check if board is full', function () {
+            $scope.board = [
+                [{ value: 'X' }, { value: 'X' }, { value: 'O' }],
+                [{ value: 'O' }, { value: 'O' }, { value: 'X' }],
+                [{ value: 'X' }, { value: 'X' }, { value: 'O' }]
+            ];
+            expect($scope.boardIsFull()).toEqual(true)
+        });
+    });  
     
     describe('$scope.reset', function () {
         var $scope, controller;
